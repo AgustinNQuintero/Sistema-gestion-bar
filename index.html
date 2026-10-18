@@ -18,6 +18,8 @@ main{padding:26px;min-width:0;max-width:1500px;width:100%;margin:0 auto}.pagehea
 @media(max-width:1000px){.layout{grid-template-columns:1fr}nav{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line);padding:7px;gap:3px}nav .label{display:none}nav button{width:auto;white-space:nowrap;margin:0;padding:10px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.table-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ticket-list{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}}
 @media(max-width:650px){header{padding:12px 14px}.topright .status-text{display:none}main{padding:17px 13px}.pagehead{flex-direction:column}.pagehead h1{font-size:22px}.stats{gap:8px}.stat{padding:12px}.stat .num{font-size:22px}.table-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tabletile{padding:11px;min-height:118px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ticket-list{grid-template-columns:1fr}.row{flex-direction:column;gap:0}.data-table th,.data-table td{padding:9px 8px}.hide-mobile{display:none}.topright{font-size:10px}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
 </head>
 <body>
 <header>
@@ -176,4 +178,6 @@ function toast(msg){let r=document.getElementById('toastRoot');r.innerHTML=`<div
 function updateClock(){document.getElementById('clock').textContent=new Date().toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})}
 setInterval(updateClock,15000);updateClock();render();
 </script>
-</body></html>
+<script src="js/brasa-supabase.js"></script>
+</body>
+</html>
